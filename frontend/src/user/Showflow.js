@@ -38,10 +38,9 @@ const Showflow = (props) => {
     
 
     return (
-        <div>
-            <br></br>
-            <br></br>
-            <h2 style={{ marginLeft: '20%', color: 'black' }}>Select a Flowchart</h2>
+        <div style={{height:'1000px'}}>
+            
+            <h2 style={{ marginLeft: '20%', color: 'black' ,fontWeight:'bolder'}}>Select a Flowchart</h2>
 
             <br></br>
             <br></br>
@@ -50,16 +49,16 @@ const Showflow = (props) => {
                 {
                     props.flow && props.flow.map((fc, i) => {
 
-                        return (<div key={i}>
+                        return (<div key={i} style={{margin:'50px'}}>
 
-<div className="cards-list">
+                            <div className="cards-list">
                                     <div class="card 3">
                                         <div class="card_image">
                                             <img  style ={{backgroundColor: '#E4BCFE'}}src="https://media1.giphy.com/media/veOuvpRopgi8w0qZL9/giphy.gif?cid=790b76110cad0a93128f073275dc8536ddec9e7d86993d08&rid=giphy.gif&ct=s  " />
                                         </div>
                                         <div class="card_title">
                                             <button type="submit" key={i} value={fc._id} onClick={(e) => handleClick(e)} >
-                                                <text>🚀</text> {fc.name}
+                                                🚀{fc.name}
                                             </button>
                                         </div>
                                     </div>

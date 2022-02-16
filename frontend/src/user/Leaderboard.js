@@ -41,20 +41,19 @@ const Leaderboard = () => {
         // console.log(currentFlowChart)
     }
     useEffect(() => { init(); }, []);
-    return (<div style={{ backgroundColor: 'rgba(5, 0, 255, 0.4)', height: '100vh' }}>
+    return (
+        <div style={{height:'1000px'}}>
+    <div style={{ backgroundColor: 'rgba(5, 0, 255, 0.4)' }}>
         <Menu>  </Menu>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+
         {!flag &&
             <div>
-                <h2 style={{ marginLeft: '20%', color: 'black' }} >Please select a Category</h2>
+                <h2 style={{ marginLeft: '20%', color: 'black' ,fontWeight:'bolder'}} >Please select a Category</h2>
                 <br></br>
 
                 <div style={{ width: '100%', display: 'flex',flexWrap: 'wrap' }}>
                     {categories && categories.map((fc, i) => {
-                        return (<div key={i}>
+                        return (<div key={i} style={{margin:'50px'}}>
                             <div className="cards-list">
                                     <div class="card 3">
                                         <div class="card_image">
@@ -75,7 +74,7 @@ const Leaderboard = () => {
         }
         {flag && <ShowFlow1 flow={currentFlowChart}></ShowFlow1>}
 
-    </div >
+    </div ></div>
     )
 }
 export default Leaderboard;

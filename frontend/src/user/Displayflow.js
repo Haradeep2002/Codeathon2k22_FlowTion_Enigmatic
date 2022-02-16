@@ -26,6 +26,7 @@ const Displayflow = (props) => {
     const [time, setTime] = useState(1000)
     const [data, setData] = useState(false)
     const [button, setButton] = useState(false)
+    const [hint, setHint] = useState(false)
     const [penal, setPenal] = useState(0)
     const [leader, setLeader] = useState([])
     const {
@@ -187,13 +188,20 @@ const Displayflow = (props) => {
         console.log(minutes)
         setPenal(10)
     }
+    // const hintHandler = () => {
+    //     setHint(true)
+    //     alert(data.hint)
+    //     setHint(false)
+    // }
     const leaderHandler = () => {
         setLeader(data.leaderboard)
     }
 
-    return (<div>
+    return (<div  style={{ backgroundColor: 'rgba(5,0,255,0.4)' 
+    // backgroundImage: 'url("https://unsplash.com/photos/8ob67fX0mk0")',
+}}>
         <Menu></Menu>
-        <div style={{ backgroundColor: 'rgba(5,0,255,0.4)' }}>
+        <div>
 
             {/* <h3 style={{ color: 'darkBlue' }}>
                 Best Score: {data && data.best_time}<br></br>
@@ -201,52 +209,185 @@ const Displayflow = (props) => {
             </h3> */}
 
 
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+    
 
-
-            <div style={{ display: 'flex',flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex' }}>
                 {/* <button style={{ marginLeft: '150px', backgroundColor: 'black', color: 'white', paddingLeft: '20px', width: '300px', height: '60px', borderRadius: '40px' }} onClick={leaderHandler}>Show Leaderboard</button>
                 {
                     JSON.stringify(leader)} */}
                 <br></br><br></br>
 
                 {!button &&
-                    <button style={{ backgroundColor: '#131D5A', marginRight: '260px', color: 'white', padding: '10px', textAlign: 'center', marginLeft: '12%', width: '200px', height: '60px', borderRadius: '40px' }} onClick={buttonHandler}>Show Hint</button>
-                }
+                    <div style={{             
+                        appearance: 'button',
+                        backgroundColor: '#131D5A',
+                        backgroundImage: 'none',
+                        border: '1px solicd #000',
+                        borderRadius: '4px',
+                        boxShadow: '#fff 4px 4px 0 0,#000 4px 4px 0 1px',
+                        boxSizing: 'border-box',
+                        color: '#fff',
+                        cursor: 'pointer', 
+                        fontSize: '20px',
+                        margin: '0 260px 10px 13%',
+                        fontWeight: '650',
+                        lineHeight: '20px',
+                        overflow: 'visible',
+                        padding: '20px 30px',
+                        textAlign: 'center',
+                        textTransform: 'none',
+                        touchAction: 'manipulation',
+                        userSelect: 'none',
+                        webkitUserSelect: 'none',
+                        verticalAlign: 'middle',
+                        whiteSpace: 'nowrap', 
+            }} onClick={buttonHandler}>
+                Show Hint</div>
+            }
 
-                {button && <p style={{ backgroundColor: 'black', color: 'white', marginLeft: '13%', width: '300px', height: '60px', borderRadius: '40px', paddingTop: '10px', paddingLeft: '6px', marginRight: '150px' }}>{data.hint}</p>}
+                {button && <p style={{            
+                        appearance: 'button',
+                        backgroundColor: '#131D5A',
+                        backgroundImage: 'none',
+                        border: '1px solicd #000',
+                        borderRadius: '4px',
+                        boxShadow: '#fff 4px 4px 0 0,#000 4px 4px 0 1px',
+                        boxSizing: 'border-box',
+                        color: '#fff',
+                        cursor: 'pointer', 
+                        fontSize: '20px',
+                        margin: '0 260px 10px 13%',
+                        fontWeight: '650',
+                        lineHeight: '20px',
+                        overflow: 'visible',
+                        padding: '20px 30px',
+                        textAlign: 'center',
+                        textTransform: 'none',
+                        touchAction: 'manipulation',
+                        userSelect: 'none',
+                        webkitUserSelect: 'none',
+                        verticalAlign: 'middle',
+                        whiteSpace: 'nowrap',  }}>
+                {data.hint}</p>}
 
-                <h1 style={{ backgroundColor: '#131D5A', color: 'white', paddingLeft: '20px', textAlign: 'center', width: '120px', height: '60px', borderRadius: '40px' }}>
+                <h1 style={{ backgroundColor: '#131D5A',
+                backgroundImage: 'none',
+                border: '1px solid #000',
+                borderRadius: '4px',
+                boxShadow: '#fff 4px 4px 0 0,#000 4px 4px 0 1px',
+                boxSizing: 'border-box',
+                color: '#fff',
+                cursor: 'pointer',
+                display: 'inline-block',
+                fontFamily: 'ITCAvantGardeStd-Bk,Arial,sans-serif',
+                fontSize: '45px',
+                fontWeight: '400',
+                lineHeight: '20px',
+                margin: '0 5px 10px 40px',
+                overflow: 'visible',
+                padding: '12px 40px',
+                textAlign: 'center',
+                textTransform: 'none',
+                touchAction: 'manipulation',
+                userSelect: 'none',
+                webkitUserSelect: 'none',
+                verticalAlign: 'middle',
+                whiteSpace: 'nowrap', }}>
                     <span>{minutes}</span>:<span>{seconds}</span>
                 </h1>
-                {!clicked && <button style={{ backgroundColor: '#131D5A', color: 'white', padding: '10px', textAlign: 'center', marginLeft: '20%', width: '200px', height: '60px', borderRadius: '40px' }} type="button" onClick={saveChangesHandler}>
+                {!clicked && <div style={{ appearance: 'button',
+                backgroundColor: '#131D5A',
+                backgroundImage: 'none',
+                border: '1px solid #000',
+                borderRadius: '4px',
+                boxShadow: '#fff 4px 4px 0 0,#000 4px 4px 0 1px',
+                boxSizing: 'border-box',
+                color: '#fff',
+                cursor: 'pointer',
+                display: 'inline-block',
+                fontFamily: 'ITCAvantGardeStd-Bk,Arial,sans-serif',
+                fontSize: '20px',
+                fontWeight: '650',
+                lineHeight: '20px',
+                margin: '0px 5px 10px 320px',
+                overflow: 'visible',
+                padding: '12px 40px',
+                textAlign: 'center',
+                textTransform: 'none',
+                touchAction: 'manipulation',
+                userSelect: 'none',
+                webkitUserSelect: 'none',
+                verticalAlign: 'middle',
+                whiteSpace: 'nowrap', }} type="button" onClick={saveChangesHandler}>
                     Submit
-                </button>
+                </div>
                 }
                 {
-                    flag && <div style={{ backgroundColor: 'green', color: 'white', padding: '10px', textAlign: 'center', marginLeft: '20%', width: '200px', height: '60px', borderRadius: '40px' }}>
-                        correct answer
+                    flag && <div style={{ appearance: 'button',
+                backgroundColor: 'green',
+                backgroundImage: 'none',
+                border: '1px solid #000',
+                borderRadius: '4px',
+                boxShadow: '#fff 4px 4px 0 0,#000 4px 4px 0 1px',
+                boxSizing: 'border-box',
+                color: '#fff',
+                cursor: 'pointer',
+                display: 'inline-block',
+                fontFamily: 'ITCAvantGardeStd-Bk,Arial,sans-serif',
+                fontSize: '20px',
+                fontWeight: '650',
+                lineHeight: '20px',
+                margin: '0px 5px 10px 290px',
+                overflow: 'visible',
+                padding: '20px 40px',
+                textAlign: 'center',
+                textTransform: 'none',
+                touchAction: 'manipulation',
+                userSelect: 'none',
+                webkitUserSelect: 'none',
+                verticalAlign: 'middle',
+                whiteSpace: 'nowrap', }}>
+                      Correct!🚀
                     </div>
                 }
                 {
 
-                    !flag && clicked && <div style={{ backgroundColor: 'red', color: 'white', padding: '10px', textAlign: 'center', marginLeft: '20%', width: '200px', height: '60px', borderRadius: '40px' }}>
-                        wrong answer
-                    </div>
+                    !flag && clicked && <div style={{ appearance: 'button',
+                backgroundColor: 'red',
+                backgroundImage: 'none',
+                border: '1px solid #000',
+                borderRadius: '4px',
+                boxShadow: '#fff 4px 4px 0 0,#000 4px 4px 0 1px',
+                boxSizing: 'border-box',
+                color: '#fff',
+                cursor: 'pointer',
+                display: 'inline-block',
+                fontFamily: 'ITCAvantGardeStd-Bk,Arial,sans-serif',
+                fontSize: '20px',
+                fontWeight: '650',
+                lineHeight: '20px',
+                margin: '0px 5px 10px 290px',
+                overflow: 'visible',
+                padding: '20px 40px',
+                textAlign: 'center',
+                textTransform: 'none',
+                touchAction: 'manipulation',
+                userSelect: 'none',
+                webkitUserSelect: 'none',
+                verticalAlign: 'middle',
+                whiteSpace: 'nowrap',  }}>
+                Wrong one🙁
+                </div>
                 }
 
             </div>
-
             <div
                 style={{
                     height: "86vh",
                     width: "75vw",
                     border: "1px solid black",
                     marginLeft: "12.5vw",
-                    backgroundColor: '#131D5A'
+                    backgroundColor: 'rgba(19, 29, 90, 0.8)'
                 }}
             >
 

@@ -228,24 +228,26 @@ const ReactFlowRenderer = (props) => {
   };
 
   return (
-    <div><div>
-      <h1>Create Flow Chart</h1>
-      <label>Enter name of your flowchart :</label>
+    <div style={{fontWeight:'bolder',backgroundColor:'white'}}><div style={{fontWeight:'bolder'}}>
+      <h1 style={{fontWeight:'bolder'}}>Create Flow Chart</h1>
+      <label style={{fontWeight:'bolder'}}>Enter name of your flowchart :</label>
       <input
         value={flowname}
         onChange={(e) => setflowName(e.target.value)}
         type="text"
         placeholder="flowchart name"
+        style={{fontWeight:'bolder'}}
       />
       <br></br>
-      <label>Enter the category  : </label>
+      <label style={{fontWeight:'bolder'}}>Enter the category  : </label>
       <input
         value={catname}
         onChange={(e) => setcatName(e.target.value)}
         type="text"
         placeholder="category"
+        style={{fontWeight:'bolder'}}
       /><br></br>
-      <label>Enter hint  : </label>
+      <label style={{fontWeight:'bolder'}}>Enter hint  : </label>
       <input
         value={hint}
         onChange={(e) => setHint(e.target.value)}
@@ -261,7 +263,8 @@ const ReactFlowRenderer = (props) => {
           width: "87vw",
           border: "1px solid black",
           marginLeft: "6vw",
-          backgroundColor: '#131D5A'
+          backgroundColor: '#131D5A',
+          fontWeight:'bolder'
         }}
       >
 
@@ -301,46 +304,49 @@ const ReactFlowRenderer = (props) => {
           <Controls />
         </ReactFlow>
 
-        <div>
+        <div style={{fontWeight:'bolder'}}>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="Enter new node name"
+            style={{fontWeight:'bolder'}}
           />
-          <button type="button" onClick={addStartHandler}>
+          <button style={{fontWeight:'bolder'}} type="button" onClick={addStartHandler}>
             Create Start Node
           </button>
-          <button type="button" onClick={addRectangleHandler}>
+          <button style={{fontWeight:'bolder'}} type="button" onClick={addRectangleHandler}>
             Create Rectangle
           </button>
-          <button type="button" onClick={addParalellogramHandler}>
+          <button style={{fontWeight:'bolder'}} type="button" onClick={addParalellogramHandler}>
             Create Paralellogram
           </button>
-          <button type="button" onClick={addEndHandler}>
+          <button style={{fontWeight:'bolder'}} type="button" onClick={addEndHandler}>
             Create End Node
           </button>
-          <button type="button" onClick={addDiamondHandler}>
+          <button style={{fontWeight:'bolder'}} type="button" onClick={addDiamondHandler}>
             Create Diamond
           </button>
         </div>
 
 
-        <div>
+        <div >
           <input
             value={newName}
             onChange={(e) => setNewName(e.target.value)}
             type="text"
+            style={{fontWeight:'bolder'}}
           />
 
-          <button type="button" onClick={updateNodeHandler}>
+          <button style={{fontWeight:'bolder'}} type="button" onClick={updateNodeHandler}>
             Update
           </button>
         </div>
-
-        <button type="button" onClick={saveChangesHandler}>
+<div>
+        <button style={{fontWeight:'bolder'}} type="button" onClick={saveChangesHandler}>
           Save changes
         </button>
+        </div>
       </div>
     </div>
   );

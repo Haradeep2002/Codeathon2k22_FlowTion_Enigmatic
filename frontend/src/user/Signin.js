@@ -82,7 +82,7 @@ const Signin = () => {
 
     return (<div style={{
 
-        backgroundColor: 'rgba(5, 0, 255, 0.65)',
+        backgroundColor: 'rgba(5, 0, 255, 0.4)',
 
     }}><Menu >  </Menu>
         <div style={{

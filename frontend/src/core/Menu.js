@@ -13,10 +13,10 @@ const isActive = (history, path) => {
 }
 
 const Menu = (props) => {
-    return (<div>
+    return (<div style={{paddingBottom:'150px'}}>
         <ul className={`nav nav-tabs justify-content-start ${classes.nav}`} style={{ float: 'left', width: '50%', margin: 0, padding: 0 }}>
             <li className="nav-item">
-            <Link className="nav-link" to="/"><img height="100px" width="250px"src={logo}></img></Link>
+            <Link className="nav-link" to="/"><img height="80px" width="200px"src={logo}></img></Link>
             </li>
             {/* {isAuthenticated() &&
                 <li className="nav-item">
