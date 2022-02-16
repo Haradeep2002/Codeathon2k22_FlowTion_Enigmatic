@@ -5,6 +5,7 @@ import ReactFlowRenderer from '../react-flow-renderer';
 import Showflow from '../user/Showflow'
 import Menu from "./Menu";
 import './style.css'
+import './Home.css';
 import { Redirect } from 'react-router-dom';
 const Home = () => {
     const [categories, setCategories] = useState(false)
@@ -85,11 +86,18 @@ const Home = () => {
                             !flag && isAuthenticated() && isAuthenticated().user.role === 0 &&
                             categories && categories.map((fc, i) => {
                                 return (<div key={i}>
-                                    <button style={{marginBottom:'20px', minWidth:'100px', backgroundColor: '#131D5A', color: 'white', padding: '10px', textAlign: 'center', marginLeft: '80px', fontSize: '30px', height: '100px', borderRadius: '10px' }} key={i} value={fc} onClick={(e) => handleClick(e)} >
-                                        {fc}
-                                    </button>
-                                    <br></br>
-                                    <br></br>
+                                    <div className="cards-list">
+                                    <div class="card 3">
+                                        <div class="card_image">
+                                            <img style ={{backgroundColor: 'pink'}}src="https://media4.giphy.com/media/7FrOU9tPbgAZtxV5mb/200w.webp?cid=ecf05e47ziso8zl7yag6mibkrhsz3j5fwbqk3nixrvtjomp9&rid=200w.webp&ct=g" />
+                                        </div>
+                                        <div class="card_title">
+                                            <button type="submit" key={i} value={fc} onClick={(e) => handleClick(e)} >
+                                                <text>🚀</text> {fc}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                 </div>)
                             })
                         }
