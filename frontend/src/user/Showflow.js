@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { getFlows, getFlow } from "./apiHelper";
 import { withRouter } from "react-router-dom";
+import './card.css'
 const Showflow = (props) => {
     const [flowcharts, setFlowcharts] = useState(false)
     const [currentFlowChart, setCurrentFlowChart] = useState(false)
@@ -51,12 +52,18 @@ const Showflow = (props) => {
 
                         return (<div key={i}>
 
-                            <button style={{marginBottom:'20px', minWidth:'100px', backgroundColor: '#131D5A', color: 'white', padding: '10px', textAlign: 'center', marginLeft: '80px', fontSize: '30px', height: '100px', borderRadius: '10px' }} key={i} value={fc._id} onClick={(e) => handleClick(e)}>
-                                {fc.name}
-
-                            </button>
-                            <br></br>
-                            <br></br>
+<div className="cards-list">
+                                    <div class="card 3">
+                                        <div class="card_image">
+                                            <img  style ={{backgroundColor: '#E4BCFE'}}src="https://media1.giphy.com/media/veOuvpRopgi8w0qZL9/giphy.gif?cid=790b76110cad0a93128f073275dc8536ddec9e7d86993d08&rid=giphy.gif&ct=s  " />
+                                        </div>
+                                        <div class="card_title">
+                                            <button type="submit" key={i} value={fc._id} onClick={(e) => handleClick(e)} >
+                                                <text>🚀</text> {fc.name}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
 
                         </div>)
                     })

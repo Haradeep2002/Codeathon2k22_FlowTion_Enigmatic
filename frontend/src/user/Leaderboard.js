@@ -7,6 +7,7 @@ import Menu from "../core/Menu";
 import { Redirect } from 'react-router-dom';
 import ShowLeader from './ShowLeader';
 import ShowFlow1 from './ShowFlow1';
+import './card.css';
 const Leaderboard = () => {
     const [categories, setCategories] = useState(false)
     const [flowcharts, setFlowcharts] = useState(false)
@@ -54,9 +55,18 @@ const Leaderboard = () => {
                 <div style={{ width: '100%', display: 'flex',flexWrap: 'wrap' }}>
                     {categories && categories.map((fc, i) => {
                         return (<div key={i}>
-                            <button style={{marginBottom:'20px', minWidth:'100px', backgroundColor: '#131D5A', color: 'white', padding: '10px', textAlign: 'center', marginLeft: '80px', fontSize: '30px', height: '100px', borderRadius: '10px' }} key={i} value={fc} onClick={(e) => handleClick(e)} >
-                                {fc} </button>
-
+                            <div className="cards-list">
+                                    <div class="card 3">
+                                        <div class="card_image">
+                                            <img style ={{backgroundColor: 'pink'}}src="https://media0.giphy.com/media/iF0qnPWMvobyNk5g8C/200w.webp?cid=ecf05e47u9ciivmvaqhvs9izrqch4ghgwatnms4hii2usyil&rid=200w.webp&ct=g" />
+                                        </div>
+                                        <div class="card_title">
+                                            <button type="submit" key={i} value={fc} onClick={(e) => handleClick(e)} >
+                                                <text>🚀</text> {fc}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>)
                     })}
 

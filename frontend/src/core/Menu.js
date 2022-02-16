@@ -2,6 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { isAuthenticated, signout } from "../auth";
 import classes from './Menu.module.css'
+import logo from './logo.png';
 const isActive = (history, path) => {
     if (history.location.pathname === path) {
         return { backgroundColor: '#131D5A', borderRadius: '30px', color: 'white' }
@@ -15,7 +16,7 @@ const Menu = (props) => {
     return (<div>
         <ul className={`nav nav-tabs justify-content-start ${classes.nav}`} style={{ float: 'left', width: '50%', margin: 0, padding: 0 }}>
             <li className="nav-item">
-                <Link className="nav-link" to="/"><img height="60px" src="https://www.logomaker.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khvGCpB5Lmh3NwXs1M3EMoAJtliQpgfRu9...8y"></img></Link>
+            <Link className="nav-link" to="/"><img height="100px" width="250px"src={logo}></img></Link>
             </li>
             {/* {isAuthenticated() &&
                 <li className="nav-item">
@@ -24,7 +25,7 @@ const Menu = (props) => {
             } */}
 
             <li className="nav-item">
-                <Link className="nav-link mt-3" style={isActive(props.history, '/leaderboard')} to="/leaderboard">Leaderboard</Link>
+                <Link className="nav-link mt-3" style={isActive(props.history, '/leaderboard')} to="/leaderboard">🏆Leaderboard</Link>
             </li>
 
 
@@ -47,7 +48,7 @@ const Menu = (props) => {
                             signout(() => {
                                 props.history.push("/")
                             })
-                    }>Signout</span>
+                    }>Signout 🚶</span>
                 </li>
             }
 
