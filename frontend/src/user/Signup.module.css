@@ -1,0 +1,49 @@
+.rform{
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 32px 64px;
+width: 100vh;
+height:87.2vh;
+
+background: radial-gradient(50% 50% at 50% 50%, #E4BCFE 0%, rgba(208, 164, 237, 0) 100%);
+backdrop-filter: blur(24px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 0px 24px 24px 0px;
+}
+.btn{display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 96px;
+    
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #131D5A;
+    border-radius: 40px;
+    color:white;
+    
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+.ip{
+    /* position: absolute; */
+/* left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px; */
+
+border: 1px solid #E7CCCC;
+box-sizing: border-box;
+border-radius: 8px;
+padding: 10px;
+}

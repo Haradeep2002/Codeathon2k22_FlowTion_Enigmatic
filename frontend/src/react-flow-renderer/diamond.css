@@ -1,0 +1,5 @@
+.mydiv{
+    transform: rotate(315deg);
+    text-align:center;
+    padding: 10px;
+}
